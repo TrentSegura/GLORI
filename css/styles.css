@@ -9,10 +9,11 @@
 body,
 html {
   font-family: "Work Sans", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   color: #333;
   background-color: #333333;
+  position: absolute;
 }
 
 .max-width {
@@ -27,7 +28,6 @@ html {
 }
 
 a {
-  text-decoration: none;
   color: #333;
 }
 
@@ -41,7 +41,7 @@ p {
 h3 {
   font-family: "Bitter", serif;
   margin-bottom: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -76,6 +76,13 @@ nav a {
   text-align: right;
 }
 
+.name a,
+a.button,
+.email a,
+a.logo {
+  text-decoration: none;
+}
+
 main {
   position: relative;
   margin-bottom: 40vh;
@@ -103,11 +110,6 @@ header {
   p {
     font-size: 16px;
   }
-
-  /* a.button {
-    width: 100%;
-    text-align: center;
-  } */
 
   .margin-center {
     width: 100%;
@@ -221,6 +223,8 @@ section.donate-section {
 @media (max-width: 750px) {
   section.donate-section {
     grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 0;
   }
 
   .about-text {
@@ -230,7 +234,7 @@ section.donate-section {
 
 .goals {
   grid-column: 1;
-  padding: 2em;
+  padding: 1em;
 }
 
 .goals-container {
@@ -269,7 +273,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1.65fr;
   gap: 2em;
-  padding: 0 2em;
+  padding: 1em;
 }
 
 @media (max-width: 750px) {
@@ -325,8 +329,8 @@ div.snippit {
 }
 
 .carousel-cell {
-  width: 400px;
-  height: 300px;
+  width: 450px;
+  height: 350px;
   border-radius: 10px !important;
   overflow: hidden;
 }
@@ -380,8 +384,8 @@ div.snippit {
 
 p.carousel-quote {
   color: #fff;
-  font-size: 14px;
-  max-width: 45ch;
+  font-size: 16px;
+  line-height: 1.4;
 }
 
 @media (max-width: 750px) {
@@ -460,8 +464,8 @@ footer .email a {
   display: grid;
   grid-template-columns: 1fr 1.65fr;
   /* grid-template-rows: 1fr 1fr; */
-  gap: 2em;
-  padding: 0 2em;
+  gap: 1em;
+  padding: 1em;
   align-items: center;
 }
 
@@ -498,8 +502,8 @@ footer .email a {
 
 .about-text {
   grid-column: 2;
-  padding: 2em;
-  padding-bottom: 4em;
+  padding: 1em;
+  padding-bottom: 2em;
   max-width: 65ch;
   margin: auto;
 }
@@ -543,7 +547,7 @@ footer .email a {
   }
 
   .nitty-gritty {
-    padding: 2em;
+    padding: 1em;
   }
 }
 
@@ -560,8 +564,10 @@ div.page:last-of-type {
 
 .modal {
   position: fixed;
+  top: 46px;
+  left: 0;
   z-index: 100;
-  height: 100vh;
+  height: calc(100vh - 46px);
   width: 100vw;
   background: rgba(0, 0, 0, 0.9);
 
@@ -581,7 +587,7 @@ div.page:last-of-type {
 }
 
 .large-modal-image {
-  max-width: 60vw;
+  max-width: 90vw;
   height: auto;
   object-fit: contain;
   transform: scale(0.5);
@@ -595,7 +601,98 @@ div.page:last-of-type {
 @media (max-width: 450px) {
   .large-modal-image {
     padding: 0;
-    width: 100vw;
+    max-width: 100vw;
     height: auto;
   }
+
+  .modal {
+    padding: 0.5em;
+  }
+}
+
+.emotional_narrative {
+  padding: 4em 0 4em 0;
+  z-index: 100;
+  display: grid;
+  /* align-items: center; */
+  grid-template-columns: 1fr 55ch 1fr;
+  row-gap: 1em;
+  background-color: rgb(245, 245, 245);
+  color: rgba(0, 0, 0, 0.62);
+}
+
+.emotional_narrative h2 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #002641;
+  text-align: center;
+}
+
+.emotional_narrative h3 {
+  text-align: center;
+  margin: 0;
+}
+
+.emotional_narrative > * {
+  grid-column: 2;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+a .readmore {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #be6830;
+  border-radius: 5px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 177, 0, 1) 0%,
+    rgba(246, 155, 63, 1) 100%
+  );
+
+  cursor: pointer;
+}
+
+a:active .readmore {
+  transform: scale(0.95);
+}
+
+@media (max-width: 450px) {
+  .emotional_narrative {
+    grid-template-columns: 1fr;
+    padding: 1em;
+  }
+}
+
+.link-nav-narratives {
+  margin-top: 1em;
+  padding-top: 2em;
+  border-top: 1px solid;
+}
+
+#tom h2 {
+  font-family: "Bitter", serif;
+  font-weight: 200;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline;
+  width: max-content;
+}
+
+#tom h3 {
+  font-family: "Work Sans", sans-serif !important;
+  font-weight: 500;
+  width: max-content;
+  display: inline;
+  font-family: "Bitter", serif;
+  font-size: 1em;
+  text-transform: capitalize;
 }
