@@ -9,10 +9,6 @@
       rel="stylesheet"
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/flickity-fullscreen@2/fullscreen.css"
-    />
 
     <link rel="stylesheet" href="css/styles.css" />
     <title>Great Lakes Orthopedic Relief International</title>
@@ -25,10 +21,10 @@
         >hi@greatlakesori.org</a
       >
     </nav>
+    <div class="modal">
+      <img src="" alt="" class="large-modal-image" />
+    </div>
     <main>
-      <div class="modal">
-        <img src="" alt="" class="large-modal-image" />
-      </div>
       <div class="page">
         <header class="max-width">
           <a href="index.html" class="logo">
@@ -50,18 +46,19 @@
 
       <div class="page">
         <div class="grid max-width">
-          <img class="tender" src="assets/01.jpg" alt="Tender Moment" />
-          <img
-            class="safe"
-            src="assets/safetocomeback.jpg"
-            alt="Safe to come back"
-          />
           <div class="mission">
             <p>
               Our mission is to ease suffering, improve health and promote
               well-being for those in need.
             </p>
           </div>
+          <img class="tender" src="assets/01.jpg" alt="Tender Moment" />
+          <img
+            class="safe mobile"
+            src="assets/safetocomeback.jpg"
+            alt="Safe to come back"
+          />
+
           <div class="about-text">
             <p>
               <strong>GLORI</strong>, based in Ann Arbor, MI, is an Orthopedic
@@ -120,8 +117,8 @@
         </section>
       </div>
 
-      <div class="page">
-        <section class="donate-section">
+      <div class="page mobile">
+        <section class="donate-section grid">
           <div class="goals">
             <div class="goals-container">
               <h3>The goals for GLORI are:</h3>
@@ -152,8 +149,32 @@
       </div>
 
       <div class="page">
-        <section class="max-width nitty-gritty">
+        <section class="max-width grid nitty-gritty">
           <div class="more-info">
+            <div class="desktop">
+              <h3>The goals for GLORI are:</h3>
+              <ul>
+                <li>
+                  Provide planning, staffing and support for 1-2 orthopedic
+                  missions to El Buen Samaritano Hospital La Romana DR per year
+                </li>
+
+                <li>
+                  Coordinate with other orthopedic humanitarian missions
+                  providing services at El Buen Samaritano Hospital
+                </li>
+
+                <li>
+                  Work with local physicians and medical staff in exchanging
+                  ideas and techniques in the care of these patients
+                </li>
+
+                <li>
+                  Use virtual technology in providing continuity of care
+                  throughout the year with patients and local medical staff
+                </li>
+              </ul>
+            </div>
             <h3>Nitty Gritty</h3>
 
             <p>
@@ -180,7 +201,7 @@
           </div>
         </section>
       </div>
-      <page id="tom">
+      <div class="page" id="tom">
         <section class="emotional_narrative">
           <p>
             "Several years ago while on a mission trip a 15 year old boy from an
@@ -203,12 +224,10 @@
               <h2>Tom,</h2>
               <h3>GLORI Co-Director</h3>
             </div>
-            <a href="tom.html"
-              ><button class="readmore">Read More...</button></a
-            >
+            <a href="tom.html">Read More...</a>
           </div>
         </section>
-      </page>
+      </div>
       <section class="quote">
         <p>
           Your generous support can help our volunteers, a team of experienced

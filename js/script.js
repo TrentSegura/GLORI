@@ -38,17 +38,13 @@ const generateSlides = (data) => {
 
       let link = document.createElement("a");
       link.href = item.link;
-
-      let readMore = document.createElement("button");
-      readMore.innerHTML = "Read More...";
-      readMore.classList.add("readmore");
+      link.innerHTML = "Read More...";
 
       slideDiv.appendChild(container);
       container.appendChild(para);
       container.appendChild(flexbox);
       flexbox.appendChild(attribute);
       flexbox.appendChild(link);
-      link.appendChild(readMore);
       attribute.appendChild(h2);
       attribute.appendChild(h3);
     }
