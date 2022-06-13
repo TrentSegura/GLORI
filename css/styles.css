@@ -667,3 +667,24 @@ section.quote {
 
   margin: 0;
 }
+
+/* Narrative Section */
+.quote-carousel-cell {
+  width: 100%;
+  min-height: 100%;
+  background-color: rgb(245, 245, 245);
+}
+
+.quote-container {
+  width: 100%;
+  padding: 4em 0 4em 0;
+  display: grid;
+  /* align-items: center; */
+  grid-template-columns: 1fr 55ch 1fr;
+  row-gap: 1em;
+}
+
+.quote-carousel-para {
+  grid-column: 2;
+  margin: 0;
+}
