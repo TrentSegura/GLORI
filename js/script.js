@@ -69,12 +69,39 @@ const generateNarratives = (narratives) => {
     para.classList.add("quote-carousel-para");
     para.innerHTML = `"${narrative.quote}"`;
 
-    container.appendChild(para);
+    let attribute = document.createElement("div");
+
+    let h2 = document.createElement("h2");
+    h2.innerHTML = `${narrative.name}, `;
+
+    let h3 = document.createElement("h3");
+    h3.innerHTML = narrative.role;
+
+    let flexbox = document.createElement("div");
+    flexbox.classList.add("flex");
+
+    let link = document.createElement("a");
+    link.href = narrative.link;
+    link.innerHTML = "Read More...";
 
     narrSlide.appendChild(container);
+    container.appendChild(para);
+    container.appendChild(flexbox);
+    flexbox.appendChild(attribute);
+    flexbox.appendChild(link);
+    attribute.appendChild(h2);
+    attribute.appendChild(h3);
     quote_carousel.appendChild(narrSlide);
   });
 };
+
+//     narSlide.appendChild(container);
+//     container.appendChild(para);
+//     container.appendChild(flexbox);
+//     flexbox.appendChild(attribute);
+//     flexbox.appendChild(link);
+//     attribute.appendChild(h2);
+//     attribute.appendChild(h3);
 
 generateNarratives(narratives);
 
@@ -83,6 +110,7 @@ var flkty2 = new Flickity(element, {
   // options
   pageDots: false,
   wrapAround: true,
+  autoPlay: true,
 });
 
 // element argument can be a selector string

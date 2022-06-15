@@ -673,18 +673,45 @@ section.quote {
   width: 100%;
   min-height: 100%;
   background-color: rgb(245, 245, 245);
+  display: grid;
+  grid-template-columns: 1fr 55ch 1fr;
 }
 
 .quote-container {
-  width: 100%;
   padding: 4em 0 4em 0;
-  display: grid;
-  /* align-items: center; */
-  grid-template-columns: 1fr 55ch 1fr;
-  row-gap: 1em;
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 1em;
 }
 
-.quote-carousel-para {
+.quote-carousel-cell > * {
   grid-column: 2;
   margin: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 650px) {
+  .quote-carousel-cell {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-carousel-cell > * {
+    grid-column: 1;
+  }
+
+  .quote-container {
+    width: auto;
+    padding: 50px;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
 }
